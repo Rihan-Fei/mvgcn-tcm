@@ -1,9 +1,9 @@
-# MVGCN — multi-view graph convolutional recommendation of TCM herb prescriptions
+# MVGCN — prior-anchored multi-view graph convolution for TCM herb recommendation
 
 Reference implementation and evaluation protocol for the paper
 
-> **MVGCN: Multi-View Graph Convolution with a Frozen Empirical-Bayes Prior for
-> TCM Herb Recommendation**
+> **MVGCN: Prior-Anchored Multi-View Graph Convolution for TCM Herb
+> Recommendation**
 > (submitted to *Knowledge-Based Systems*)
 
 The model is named `SMGCN_MVANA` in the code — it is a faithful PyTorch port of the
@@ -241,8 +241,8 @@ results/                     created at run time (git-ignored)
 
 ```bibtex
 @article{he2026mvgcn,
-  title   = {MVGCN: Multi-View Graph Convolution with a Frozen Empirical-Bayes
-             Prior for TCM Herb Recommendation},
+  title   = {MVGCN: Prior-Anchored Multi-View Graph Convolution for TCM Herb
+             Recommendation},
   author  = {He, Ruihan and Zhong, Liyan and Xu, Yutong and Zhao, Jing and Yang, Lei},
   journal = {Knowledge-Based Systems},
   year    = {2026},
@@ -261,11 +261,11 @@ terms as set by its authors.
 
 ## 中文說明
 
-本倉庫是論文《MVGCN: Multi-View Graph Convolution with a Frozen
-Empirical-Bayes Prior for TCM Herb Recommendation》的參考實作。程式中的模型名為
-`SMGCN_MVANA`，論文中稱 MVGCN。多視圖編碼器（三個關係視圖＋SANA 跨層融合）沿用
-SMGCN（Jin et al., ICDE 2020），在本論文中作為固定主幹；論文貢獻是凍結先驗錨、
-二十 seed 協議與部件分解。
+本倉庫是論文《MVGCN: Prior-Anchored Multi-View Graph Convolution for TCM Herb
+Recommendation》的參考實作。程式中的模型名為 `SMGCN_MVANA`，論文中稱 MVGCN。論文的
+架構新意在評分函數而非編碼器：多視圖編碼器（三個關係視圖＋SANA 跨層融合）沿用
+SMGCN（Jin et al., ICDE 2020）作固定主幹，新增的是把標準化後的凍結經驗貝氏
+P(藥|症) 與門控（初值 0.01）的圖分支分數相加；貢獻另含二十 seed 協議與部件分解。
 
 * 數據 **不隨倉庫分發**，請依第 3 節從 SDPR 官方倉庫下載後執行
   `python baselines/prepare_sdpr_data.py`。
