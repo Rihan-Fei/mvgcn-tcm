@@ -1,0 +1,8 @@
+# Normalise line endings so the shell scripts also run on Linux/macOS.
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary

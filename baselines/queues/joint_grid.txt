@@ -1,0 +1,9 @@
+g2d_a010_k050   1  --direct_residual --freeze_direct --sana_alpha 0.10 --direct_shrink 0.50 --seeds 1
+g2d_a020_k050   1  --direct_residual --freeze_direct --sana_alpha 0.20 --direct_shrink 0.50 --seeds 1
+g2d_a020_k100   1  --direct_residual --freeze_direct --sana_alpha 0.20 --direct_shrink 1.00 --seeds 1
+g2d_a020_k200   1  --direct_residual --freeze_direct --sana_alpha 0.20 --direct_shrink 2.00 --seeds 1
+g2d_a020_k400   1  --direct_residual --freeze_direct --sana_alpha 0.20 --direct_shrink 4.00 --seeds 1
+g2d_a050_k050   1  --direct_residual --freeze_direct --sana_alpha 0.50 --direct_shrink 0.50 --seeds 1
+g2d_a050_k100   1  --direct_residual --freeze_direct --sana_alpha 0.50 --direct_shrink 1.00 --seeds 1
+g2d_a050_k200   1  --direct_residual --freeze_direct --sana_alpha 0.50 --direct_shrink 2.00 --seeds 1
+g2d_a050_k400   1  --direct_residual --freeze_direct --sana_alpha 0.50 --direct_shrink 4.00 --seeds 1

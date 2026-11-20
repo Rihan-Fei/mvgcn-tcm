@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Experiment output: regenerate with the commands in README section 5
+results/
+locks/
+*.log
+
+# Dataset: obtain from the SDPR repository (see Data/README.md)
+Data/SDPR_Herb/
+Data/Set2Set/
+Data/TCM_PD/
+Data/TCM_Lung/
+Data/knowledge/
+
+# Figures produced by plot_joint_hp.py
+figs_joint/
+fig_*.png
+joint_hp_summary.md
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
