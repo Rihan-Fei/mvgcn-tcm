@@ -19,10 +19,10 @@ below (see [Result files](#result-files)).
 MVGCN couples two components:
 
 * **A graph branch.** Two message-passing channels over the symptom–herb graph,
-  each with a different DropNode mask, LayerNorm after every layer, symptom–symptom
-  and herb–herb residual projections, a gated cross-layer fusion of the last two
-  layers (SANA, as in SMGCN), and masked key–value attention over the symptom set
-  (variable-length records, 1–6 symptoms per prescription).
+  each with a different DropNode mask, row-wise L2 normalisation after every layer,
+  symptom–symptom and herb–herb residual projections, a gated cross-layer fusion of
+  the last two layers (SANA, as in SMGCN), and masked key–value attention over the
+  symptom set (records are variable length: 1–16 symptoms, mean 1.5).
 * **A frozen empirical-Bayes prior.** P(herb | symptom) estimated from the training
   prescriptions only, shrunk towards the marginal herb frequency, stored as a matrix
   that the optimiser never updates. Its score enters the logit through a gate
